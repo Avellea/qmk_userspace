@@ -17,16 +17,31 @@
 #include QMK_KEYBOARD_H
 
 
-#include "symbolmap.h"
-
-
 // Each layer gets a name for readability, which is then used in the keymap matrix below.
 // The underscores don't mean anything - you can have a layer called STUFF or any other name.
 enum custom_layers {
     BASE,
     FUNC,
     SYMB,
-    // NAVI
+};
+
+
+/* Common unicode symbols I use in content creation
+*/
+enum unicode_names {
+  JP_YEN,
+  JP_CMA,
+  JP_STP,
+  JP_OBR,
+  JP_CBR,
+};
+
+const uint32_t PROGMEM unicode_map[] = {
+  [JP_YEN] = 0x00A5,  // ¥
+  [JP_CMA] = 0x3001,  // 、
+  [JP_STP] = 0x3002,  // 。
+  [JP_OBR] = 0x3010,  //【
+  [JP_CBR] = 0x3011,  // 】
 };
 
 
@@ -44,11 +59,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   /* Keymap FUNC: Function Layer
    */
 [FUNC] = LAYOUT_65_ansi_blocker(
-   KC_GRV,    KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,    KC_F6,    KC_F7,    KC_F8,    KC_F9,   KC_F10,   KC_F11,   KC_F12,    KC_DEL,  _______,
-  _______,   KC_F13,   KC_F14,   KC_F15,   KC_F16,   KC_F17,   KC_F18,   KC_F19,   KC_F20,   KC_F21,   KC_F22,   KC_F23,   KC_F24,   _______,  _______,
+  KC_GRV,   KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,    KC_F6,    KC_F7,    KC_F8,    KC_F9,    KC_F10,   KC_F11,   KC_F12,    KC_DEL,  _______,
+  _______,  KC_F13,   KC_F14,   KC_F15,   KC_F16,   KC_F17,   KC_F18,   KC_F19,   KC_F20,   KC_F21,   KC_F22,   KC_F23,   KC_F24,   _______,  _______,
   _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,             _______,
-    MO(2),  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,             KC_VOLU,  KC_MPLY,
-  _______,  _______,  _______,                                QK_BOOT,                                _______,  _______,  KC_MPRV,   KC_VOLD,  KC_MNXT
+  MO(2),    _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,             KC_VOLU,  KC_MPLY,
+  _______,  _______,  _______,                                QK_BOOT,                            _______,  _______,  KC_MPRV,   KC_VOLD,  KC_MNXT
   ),
 
   /* Keymap SYMB: Symbol Layer
