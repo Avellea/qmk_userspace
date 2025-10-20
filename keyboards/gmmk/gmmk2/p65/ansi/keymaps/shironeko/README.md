@@ -11,10 +11,10 @@ SYMB layer: `fn+lshift`
 - Caps lock indicator
 - Per-layer lighting
 - Common Japanese punctuation/symbols
-    - ¥
-    - 【】
-    - 。
-    - 、
+    - `fn+lshift+\`: ¥
+    - `fn+lshift+[ <or> ]`:【】
+    - `fn+lshift+.`: 。
+    - `fn+lshift+,`: 、
 - Media keys
     - `fn+left`: Previous
     - `fn+right`: Next
