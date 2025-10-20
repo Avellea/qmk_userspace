@@ -23,8 +23,8 @@ These are the keyboards contained in this repository. More may be added as time 
 
 ## Keymaps
 - gmmk2
-    - shironeko — daily driver (keyboards/gmmk/gmmk2/p65/ansi/keymaps/avellea)
-        - [Keymap information](keyboards/gmmk/gmmk2/p65/ansi/keymaps/avellea/README.md)
+    - shironeko — daily driver (keyboards/gmmk/gmmk2/p65/ansi/keymaps/shironeko)
+        - [Keymap information](keyboards/gmmk/gmmk2/p65/ansi/keymaps/shironeko/README.md)
 
 
 ## Build & flash
