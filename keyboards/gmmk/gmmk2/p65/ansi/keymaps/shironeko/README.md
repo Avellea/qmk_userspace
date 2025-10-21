@@ -10,6 +10,7 @@ SYMB layer: `fn+lshift`
 
 - Caps lock indicator
 - Per-layer lighting
+- Swapped LALT <-> LGUI
 - Common Japanese punctuation/symbols
     - `fn+lshift+\`: ¥
     - `fn+lshift+[ <or> ]`:【】
